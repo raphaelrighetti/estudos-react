@@ -51,8 +51,14 @@ const Pergunta = ({ perguntaAtual, setPerguntaAtual }) => {
   return (
     <>
       <form>
-        <h2>{pergunta}</h2>
-        <Radio options={options} value={usuarioRes} setValue={setUsuarioRes} />
+        <fieldset>
+          <legend>{pergunta}</legend>
+          <Radio
+            options={options}
+            value={usuarioRes}
+            setValue={setUsuarioRes}
+          />
+        </fieldset>
         <button onClick={handleClick}>Próxima</button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
