@@ -1,0 +1,23 @@
+.header {
+  max-width: 75%;
+  margin-inline: auto;
+}
+
+.nav {
+  width: 100%;
+}
+
+.linksList {
+  width: 100%;
+  padding: 1rem;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.activeLink {
+  color: blueviolet;
+}

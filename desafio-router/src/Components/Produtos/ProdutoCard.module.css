@@ -1,0 +1,13 @@
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.produto {
+  margin: 1rem;
+}
+
+.produto h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

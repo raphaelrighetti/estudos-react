@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+}
+
+.produtosList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 75%;
+  margin-inline: auto;
+}
