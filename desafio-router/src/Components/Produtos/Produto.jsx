@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import styles from './Produto.module.css';
 import useFetch from '../../hooks/useFetch';
 import ProdutoImg from './ProdutoImg';
+import Head from '../Head/Head';
 
 const Produto = () => {
   const params = useParams();
@@ -22,16 +23,23 @@ const Produto = () => {
   if (!data) return null;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
-        <ProdutoImg src={data.fotos[0].src} alt={data.fotos[0].titulo} />
+    <>
+      <Head title={data.nome} />
+      <div className={styles.container}>
+        <div className={styles.left}>
+          {data.fotos.map(foto => {
+            return (
+              <ProdutoImg key={foto.src} src={foto.src} alt={foto.titulo} />
+            );
+          })}
+        </div>
+        <div className={styles.right}>
+          <h2 className={styles.title}>{data.nome}</h2>
+          <p className={styles.preco}>R$ {data.preco}</p>
+          <p>{data.descricao}</p>
+        </div>
       </div>
-      <div className={styles.right}>
-        <h2>{data.nome}</h2>
-        <p>R$ {data.preco}</p>
-        <p>{data.descricao}</p>
-      </div>
-    </div>
+    </>
   );
 };
 

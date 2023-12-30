@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin-inline: auto;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.item::before {
+  content: '-';
+  margin-right: .5rem;
+}
